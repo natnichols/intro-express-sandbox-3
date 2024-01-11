@@ -5,7 +5,7 @@ import express from 'express'
 const app = express()
 
 // configure the app (app.set)
-
+app.set('view engine', 'ejs')
 
 
 // mount Middleware (app.use)
@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
   res.send(`<h1>Mulder, it's me</h1>`)
 })
 app.get('/home', function(req, res) {
-  res.send(`<h1>Home Page</h1>`)
+  res.render('home')
 })
 
 
